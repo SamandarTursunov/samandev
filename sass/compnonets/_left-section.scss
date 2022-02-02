@@ -1,0 +1,101 @@
+@use "../abstract/mixins" as mix;
+@use "../abstract/variables" as vari;
+/* left-section */
+
+.left-section {
+    width: 100%;
+    @include mix.flex(space-between, center);
+    flex-direction: column;
+    padding-top: 1.25rem;   
+
+    &__block {
+        margin-bottom: 26rem;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            background-color: vari.$color-primary;
+            opacity: 0.2;
+        } 
+
+        &-item1 {
+            width: 25px;
+            height: 2px;
+            background-color: vari.$color-primary;
+            margin-bottom: 0.55rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 2px;
+                top: 0;
+                left: 0;
+                background-color: #000c2e;
+            }
+        }
+
+
+        &-item2 {
+            width: 25px;
+            height: 2px;
+            background-color: vari.$color-primary;
+            margin-bottom: 0.55rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 2px;
+                top: 0;
+                left: 0;
+                background-color: #000c2e;
+            }
+        }
+
+        &-item3 {
+            width: 25px;
+            height: 2px;
+            background-color: vari.$color-primary;
+            margin-bottom: 0.55rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 2px;
+                top: 0;
+                left: 0;
+                background-color: #000c2e;
+            }
+        }
+    }
+
+    &__icons {
+        width: 100%;
+        @include mix.flex(space-between, center);
+        flex-direction: column;
+        
+        &-box {
+            margin-bottom: 2.55rem;
+            
+            & i {
+                background-color: vari.$color-primary;
+                text-decoration: underline;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+/* /left-section */

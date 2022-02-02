@@ -1,0 +1,28 @@
+
+/* section */
+.section {
+    width: 140px;
+    height: 700px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 5px;
+        height: 700px;
+        opacity: 0.2;
+        background-color: rgb(145, 141, 141);
+    }
+}
+.footer {
+    display: none;
+    padding: 20px 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #004890;
+}
+

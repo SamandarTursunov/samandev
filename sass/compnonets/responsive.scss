@@ -1,0 +1,173 @@
+@use "../abstract/mixins" as mix;
+@use "../abstract/variables" as vari;
+
+/* responsive */
+
+@include mix.media-xl {
+    .container {
+        width: 80%;
+    }
+
+    .container1 {
+        width: 50%;
+    }
+
+    .side-bar {
+        width: 80%;
+    }
+
+    .main-event {
+        width: 80%;
+    }
+
+    .opacity {
+        bottom: 19px;
+        height: 226px;
+    }
+}
+
+
+@include mix.media-lg {
+    .container {
+        width: 80%;
+
+    }
+
+    .container1 {
+        width: 50%;
+    }
+
+    .side-bar {
+        width: 80%;
+    }
+
+    .main-event {
+        width: 80%;
+    }
+
+    .opacity {
+        bottom: 19px;
+        height: 236px;
+    }
+}
+
+@include mix.media-md {
+
+    .container {
+        width: 30%;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .nav-ul {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navbar__bars {
+        color: #fff;
+        opacity: 1 !important;
+        top: 22px;
+        right: 20px;
+        font-size: 2rem;
+    }
+
+    .side-bar {
+        width: 100%;
+        margin: 150px 0 10px 0;
+
+        &__paragraf {
+            margin-left: -100px;
+            margin-right: 200px;
+        }
+
+        &__heading {
+            margin-left: -40px;
+        }
+
+        &__text {
+            font-size: 1em;
+        }
+
+        &__h2 {
+            font-size: 2em;
+            padding-bottom: .5em;
+        }
+
+        &__p {
+            font-size: 1em;
+            line-height: 22px;
+        }
+    }
+
+    .container1 {
+        width: 30%;
+    }
+
+    .main-event {
+        display: none;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%; 
+        display: block;
+    }
+
+}
+
+@include mix.media-sm {
+
+
+    .nav-ul {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navbar__bars {
+        color: #fff;
+        opacity: 1 !important;
+        top: 22px;
+        right: 20px;
+        font-size: 2rem;
+    }
+
+    .side-bar {
+        width: 100%;
+        margin: 150px 0 10px 0;
+
+        &__paragraf {
+            margin-left: -140px;
+            margin-right: 200px;
+        }
+
+        &__heading {
+            margin-left: -40px;
+        }
+
+        &__text {
+            font-size: 1em;
+        }
+
+        &__h2 {
+            font-size: 2em;
+            padding-bottom: .5em;
+        }
+
+        &__p {
+            font-size: 1em;
+            line-height: 22px;
+        }
+    }
+
+    .container1 {
+        display: none;
+    }
+
+    .section::after {
+        display: none;
+    }
+}

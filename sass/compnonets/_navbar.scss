@@ -1,0 +1,54 @@
+@use "../abstract/mixins" as mix;
+@use "../abstract/variables" as vari;
+/* navbar*/
+.navbar {
+    @include mix.flex($flex1: space-around, $flex2: center);
+    padding-top: 1.25rem;
+    position: relative;
+    .nav__logo {
+        @include mix.fon($fsize: 30, $fweight: 600,);
+        color: vari.$color-primary;
+        cursor: pointer;
+    }
+
+    .nav-ul {
+        @include mix.flex($flex1: space-between, $flex2: center);
+    
+        &__li {
+            padding: 0.75rem;
+            @include mix.li;
+        }
+
+        &__li-a {
+            border-bottom: 2px solid transparent; 
+            transition: .3s ease-in;
+            padding-bottom: 0.75rem;
+        }
+
+        &__li-a:hover {
+            border-bottom: 2px solid vari.$color-primary;
+        }
+
+        .search i {
+            color: #fff;
+            cursor: pointer;
+            transition: 1s ease-in;
+            padding: 0.75rem;
+        }
+        
+        .search i:hover {
+            color: rgba(247, 151, 151, 0.472);
+            transform: scale(1.5);
+        }   
+    }
+
+    .navbar__bars {
+        opacity: 0;
+        position: absolute;
+    }
+}
+#active {
+    border-bottom: 2px solid vari.$color-primary;
+}
+
+/* /navbar */

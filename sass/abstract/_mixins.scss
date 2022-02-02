@@ -1,0 +1,52 @@
+@use "sass:math";
+@mixin li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+}
+
+@mixin  flex($flex1, $flex2) {
+    display: flex;
+    justify-content: $flex1;
+    align-items: $flex2;
+}
+
+@mixin fon($fweight: 0,$fsize: 0) {
+    font:
+    {
+        weight: $fweight;
+        size: math.div($fsize, 16) * 1rem;   
+    };
+}
+/* media*/
+
+@mixin media-xl  {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (max-width: 890px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (max-width: 695px) {
+        @content;
+    }
+}
+
+
+
+/* /media*/ 

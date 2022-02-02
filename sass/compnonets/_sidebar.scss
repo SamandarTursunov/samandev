@@ -1,0 +1,86 @@
+@use "../abstract/mixins" as mix;
+@use "../abstract/variables" as vari;
+
+/* sidebar */
+.side-bar {
+    width: 52.625rem;
+    height: 300px;
+    @include mix.flex(space-between,center);
+    margin: 6.5rem auto 0;
+
+    &__paragraf {
+        width: 50%;
+        height: auto;
+        padding: .75rem;
+    }
+
+    &__number {
+        @include mix.fon(600, 22);
+        color: vari.$color-primary;
+    }
+
+    &__h3 {
+        width: 100%;
+        @include mix.fon(400, 22);
+        color: vari.$color-primary;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    &__text {
+        width: 75%;
+        @include mix.fon(400, 18);
+        color: vari.$color-secondary;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    &__hr {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(255, 255, 255);
+        margin: 3% 0 3% 0;
+        position: relative;
+    }
+    
+    &__hr::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 2px;
+        background-color: rgb(178, 253, 56);
+    }
+
+    &__heading {
+        width: 100%;
+        height: auto;
+        padding: .75rem;
+        margin-left: 13rem;
+    }
+
+    &__h2 {
+        width: 30%; 
+        @include mix.fon(600, 40);
+        color: vari.$color-primary;
+        padding-bottom: 2rem;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+
+    &__p {
+        @include mix.fon(400, 18);
+        color: vari.$color-secondary;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    &__underline {
+        text-decoration: underline;
+    }
+}
+
+
+
+/* /sidebar */

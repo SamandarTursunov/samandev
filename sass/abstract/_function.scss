@@ -1,0 +1,4 @@
+@function add($one, $two) {
+    $result: $one / $two;
+    @return $result;
+}
