@@ -297,7 +297,7 @@
         flex-direction: column;
 
         &__paragraf {
-            margin-right: 233px;
+            margin-right: 240px;
         }
 
         &__heading {
@@ -337,8 +337,8 @@
 
 
             & .absolute img {
-                width: 51px;
-                height: 51px;
+                width: 65px;
+                height: 65px;
                 position: relative;
                 top: 44px;
                 left: -76px;
@@ -347,8 +347,9 @@
         }
     }
     .opacity {
-        width: 104%;
+        width: 98%;
         bottom: 3%;
+        left: 5px;
         height: 32rem;
     }
 
@@ -357,7 +358,7 @@
     }
 
     .section::after {
-        height: 130%;
+        height: 155%;
     }
 
     .left-section__block::after {
@@ -481,3 +482,13 @@
         width: 30%;
     }
 } 
+
+@include mix.media-sm-x1 {
+    .header {
+        width: 163%;
+    }    
+
+    .section::after {
+        height: 175%;
+    }
+}

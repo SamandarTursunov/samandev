@@ -54,10 +54,15 @@
 }
 
 @mixin media-sm-x {
-    @media screen and (max-width: 466px) {
+    @media screen and (max-width: 622px) {
         @content;
     }
 }
 
+@mixin media-sm-x1 {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
 
 /* /media*/ 
